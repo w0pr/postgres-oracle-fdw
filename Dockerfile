@@ -4,8 +4,8 @@ RUN for file in `ls /tmp/*.zip`; do unzip -o $file -d /opt/; done
 
 ##################################################################################
 FROM postgis/postgis:16-3.5
-LABEL org.opencontainers.image.authors=asi@dbca.wa.gov.au
-LABEL org.opencontainers.image.source=https://github.com/dbca-wa/postgres-oracle-fdw
+LABEL org.opencontainers.image.authors=felix.deutsch@artinet.com
+LABEL org.opencontainers.image.source=https://github.com/w0pr/postgres-oracle-fdw
 
 RUN apt-get update -y \
   && apt-get install -y --no-install-recommends apt-utils libaio1 libaio-dev build-essential make postgresql-server-dev-16 \
